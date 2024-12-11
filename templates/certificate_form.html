@@ -1,0 +1,33 @@
+<!-- templates/certificate_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Certificate Generator</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <h1>Certificate Generator</h1>
+    <form action="{{ url_for('generate') }}" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="course">Course Name:</label>
+      <input type="text" id="course" name="course" required /><br /><br />
+
+      <label for="all_classes">All Classes Completed:</label>
+      <select id="all_classes" name="all_classes" required>
+        <option value="YES">Yes</option>
+        <option value="No">No</option></select
+      ><br /><br />
+
+      <label for="all_assignment">All assignment:</label>
+      <select id="all_assignment" name="all_assignment" required>
+        <option value="YES">Yes</option>
+        <option value="No">No</option></select
+      ><br /><br />
+
+      <button type="submit">Generate Certificate</button>
+    </form>
+  </body>
+</html>
